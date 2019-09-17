@@ -44,15 +44,21 @@ double acumulado(){
     scanf("%f", &p);
     float q = 1 - p;
 
+    double somatorio = 0;
 
-    for
+    for(int i = 0; i <= n; i++){
+        float resultadoAcu = combinacao(i,x) * pow(p,x) * pow(q,i-x);
+        printf("%f\n",resultadoAcu);
+        somatorio += resultadoAcu;
+    }
+
+    printf("Resultado: %f ", somatorio);
 }
 
 
 int main(){
-
+    acumulado();
 }
-
 
 
 
