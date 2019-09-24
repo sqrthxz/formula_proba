@@ -15,7 +15,7 @@ double combinacao(int n, int x){
     return C;
 }
 
-double simples(){
+void simples(){
     //variaveis
     int n,x;
     float p;
@@ -32,7 +32,7 @@ double simples(){
     printf("Resultado: %.2f %% ", resultado);
 }
 
-double acumulado(){
+void acumulado(){
     //variaveis
     int n,x;
     float p;
@@ -44,21 +44,21 @@ double acumulado(){
     scanf("%f", &p);
     float q = 1 - p;
 
-    double somatorio = 0;
+    float somatorio = 0;
 
-    for(int i = 0; i <= n; i++){
-        float resultadoAcu = combinacao(i,x) * pow(p,x) * pow(q,i-x);
-        printf("%f\n",resultadoAcu);
+    for(int i = 0; i <= x; i++){
+        float resultadoAcu = combinacao(n,i) * pow(p,i) * pow(q,n-i);
         somatorio += resultadoAcu;
     }
 
-    printf("Resultado: %f ", somatorio);
+    printf("Resultado: %.4f ", somatorio);
 }
 
 
 int main(){
     acumulado();
 }
+
 
 
 
