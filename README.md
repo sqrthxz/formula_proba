@@ -1,2 +1,2 @@
 # formula_proba
-Fórmulas de probabilidade
+Trabalho 1 e 2 de Estatística e Probalidade.
