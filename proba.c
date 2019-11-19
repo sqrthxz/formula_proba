@@ -6,11 +6,15 @@ void Est_Med(float p, float n, float x, float s, float gc){
   if (gc == 99 ){
     z = 2.58;
   }
-  if (gc == 95 ){
+  else if (gc == 95 ){
     z = 1.96;
   }
-  if (gc == 90 ){
+  else if (gc == 90 ){
     z = 1.65;
+  }
+  else{
+    printf("Insira um grau de confiança válido (90, 95 ou 99)\n");
+    return;
   }
 
   float Med_up, Med_down, error;
@@ -38,11 +42,15 @@ void Est_Prop(float N, float n, float x, float gc){
   if (gc == 99 ){
     z = 2.58;
   }
-  if (gc == 95 ){
+  else if (gc == 95 ){
     z = 1.96;
   }
-  if (gc == 90 ){
+  else if (gc == 90 ){
     z = 1.65;
+  }
+  else{
+    printf("Insira um grau de confiança válido (90, 95 ou 99)\n");
+    return;
   }
 
   float p = x / n;
@@ -66,7 +74,7 @@ void Est_Prop(float N, float n, float x, float gc){
 
 
 int main(){
-  
+
   printf("Bem-vindo!\n");
   while(1){
     int menu;
@@ -83,7 +91,7 @@ int main(){
       scanf("%f",&x);
       printf("Digite o desvio padrão amostral: ");
       scanf("%f",&s);
-      printf("Digite o grau de confiança (%): ");
+      printf("Digite o grau de confiança (%%):");
       scanf("%f",&gc);
       printf("\nResultado:\n");
       Est_Med(p,n,x,s,gc);
